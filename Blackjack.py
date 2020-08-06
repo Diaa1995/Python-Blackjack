@@ -16,9 +16,10 @@ class Cards:
 class Deck(Cards):
     
     def __init__(self):
+        Cards.__init__(self)
         self.deck = []  # start with an empty list
-        for suit in suits:
-            for rank in ranks:
+        for suit in self.suits:
+            for rank in self.ranks:
                 self.deck.append(f'{suit} {rank}')
                 pass
     
